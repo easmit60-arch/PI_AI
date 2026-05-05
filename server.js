@@ -277,6 +277,11 @@ app.post("/sherlock", async (req, res) => {
   }
 });
 
+// Serve ui.html as the default page at root
+app.get("/", (_req, res) => {
+  res.sendFile("ui.html", { root: process.cwd() });
+});
+
 app.listen(PORT, () => {
   console.log(`\n🚀 PI_AI Local Server`);
   console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);

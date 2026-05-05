@@ -1,15 +1,84 @@
-/* Neon Rouge, Cyan & Blue-Black Theme - RSN Branding */
-/* Neon Rouge, Cyan & Blue-Black Theme - RSN Branding */
+
+/* === Trauma-Informed, Neon, Commerce, and Consent Variables & Resets === */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 :root {
-  --neon-rouge: #FF006E;
-  --neon-cyan: #00D9FF;
+  --black: #101114;
+  --white: #ffffff;
+  --red: #ff003b;
+  --gold: #e3a535;
+  --ink-soft: #565a66;
+  --line-soft: #ded7c8;
+  --panel: #fff9ef;
+  /* Neon/commerce/trauma-informed variables */
+  --neon-rouge: #ff006e;
+  --neon-cyan: #00d9ff;
   --blue-black: #0a1128;
   --text-light: #e0f0ff;
   --glow-shadow: 0 0 10px rgba(0, 217, 255, 0.6), 0 0 20px rgba(255, 0, 110, 0.4);
+  --commerce-accent: #dc3304;
+  --consent-green: #1ecb7b;
+  --safety-yellow: #ffe066;
+  --trauma-pink: #f7c6d9;
 }
 
-* {
-  box-sizing: border-box;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --commerce-accent: #dc3304;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --commerce-accent: #dc3304;
+  }
+}
+
+.commerce-accent {
+  color: var(--commerce-accent) !important;
+}
+
+/* Dignity-first, trauma-informed, consent, and safety cues */
+.dignity-cue {
+  background: var(--trauma-pink, #f7c6d9);
+  color: var(--loreal-black, #101114);
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin: 8px 0;
+}
+.consent-optin {
+  background: var(--consent-green, #1ecb7b);
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 600;
+  margin: 6px 0;
+}
+.safety-priority {
+  background: var(--safety-yellow, #ffe066);
+  color: var(--loreal-black, #101114);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+/* Neon/glow effect for privacy-first opt-in tools or highlights */
+.neon-glow {
+  color: var(--neon-cyan);
+  text-shadow: var(--glow-shadow);
+  font-weight: bold;
+}
+.neon-rouge {
+  color: var(--neon-rouge);
+  text-shadow:
+    0 0 8px var(--neon-rouge),
+    0 0 16px var(--neon-rouge, #ff006e);
+  font-weight: bold;
 }
 
 html, body {
@@ -19,10 +88,14 @@ html, body {
 }
 
 body {
-  background: linear-gradient(135deg, var(--blue-black) 0%, #1a2a3a 50%, #0f1b2e 100%);
-  color: var(--text-light);
-  font-family: 'Montserrat', 'Avenir Next', sans-serif;
-  line-height: 1.6;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: var(--loreal-black, #101114);
+  display: flex;
+  justify-content: center;
+  background:
+    radial-gradient(circle at 12% 8%, #fff5f7 0%, rgba(255, 245, 247, 0) 40%),
+    radial-gradient(circle at 88% 2%, #fff3dc 0%, rgba(255, 243, 220, 0) 36%),
+    linear-gradient(180deg, #fffefb 0%, #f8f4ec 100%);
 }
 
 /* Main Content */
